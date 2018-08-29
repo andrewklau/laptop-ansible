@@ -1,0 +1,21 @@
+- name: Install packages
+  apt: name={{item}}
+  with_items:
+    - nano
+    - tlp
+    - tlp-rdw
+    - tp-smapi-dkms
+    - acpi-call-dkms
+    - thermald
+
+- name: install atom
+  command: snap install atom --classic
+
+- name: install nuclide
+  command: apm install nuclide
+
+- name: install spotify
+  command: snap install spotify
+
+- name: install telegram
+  command: snap install telegram-desktop
