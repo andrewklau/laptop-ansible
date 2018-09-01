@@ -11,8 +11,13 @@
 - name: install atom
   command: snap install atom --classic
 
+- name: install kubectl
+  command: snap install kubectl --classic
+
 - name: install nuclide
-  command: apm install nuclide
+  command: creates="~/.atom/packages/nuclide" apm install nuclide
+  become: yes
+  become_user: alau
 
 - name: install spotify
   command: snap install spotify
