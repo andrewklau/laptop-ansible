@@ -7,6 +7,9 @@
     - tp-smapi-dkms
     - acpi-call-dkms
     - thermald
+    - network-manager-vpnc
+    - network-manager-vpnc-gnome
+    - vpnc
 
 - name: install atom
   command: snap install atom --classic
