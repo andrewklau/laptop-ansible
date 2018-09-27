@@ -10,6 +10,7 @@
     - network-manager-vpnc
     - network-manager-vpnc-gnome
     - vpnc
+    - python-pip
 
 - name: install atom
   command: snap install atom --classic
@@ -27,3 +28,8 @@
 
 - name: install telegram
   command: snap install telegram-desktop
+
+- name: install awscli
+  command: creates="~/.local/bin/aws" pip install awscli --upgrade --user
+  become: yes
+  become_user: alau
