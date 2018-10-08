@@ -18,11 +18,6 @@
 - name: install kubectl
   command: snap install kubectl --classic
 
-- name: install nuclide
-  command: creates="~/.atom/packages/nuclide" apm install nuclide
-  become: yes
-  become_user: alau
-
 - name: install spotify
   command: snap install spotify
 
@@ -32,4 +27,4 @@
 - name: install awscli
   command: creates="~/.local/bin/aws" pip install awscli --upgrade --user
   become: yes
-  become_user: alau
+  become_user: andrew

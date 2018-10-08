@@ -1,18 +1,6 @@
 - name: Restore original gnome session
   apt: name={{item}}
   with_items:
-    - gnome-session
-    - vanilla-gnome-desktop
     - vanilla-gnome-default-settings
     - gnome-tweak-tool
-
-- name: Backup old ubuntu style
-  command: creates="/usr/share/gnome-shell/theme/ubuntu.css.bak" mv /usr/share/gnome-shell/theme/ubuntu.css /usr/share/gnome-shell/theme/ubuntu.css.bak
-
-- name: Create symbolic link 
-  file:
-    src: "/usr/share/gnome-shell/theme/gnome-shell.css"
-    dest: "/usr/share/gnome-shell/theme/ubuntu.css"
-    state: link
-
 
